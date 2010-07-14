@@ -24,8 +24,11 @@ if !exists("jslint_highlight_color")
 endif
 
 " set up auto commands
-autocmd BufWritePost,FileWritePost *.js call JavascriptLint()
+"autocmd BufWritePost,FileWritePost *.js call JavascriptLint()
 autocmd BufWinLeave * call s:MaybeClearCursorLineColor()
+
+" toggle javaScriptLint with command JSL
+command! -n=? -complete=dir -bar JSL :call JavascriptLint()
 
 " Runs the current file through javascript lint and 
 " opens a quickfix window with any warnings

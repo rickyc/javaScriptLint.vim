@@ -1,0 +1,1 @@
+../javaScriptLint.vim
